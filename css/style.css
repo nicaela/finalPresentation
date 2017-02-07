@@ -1,0 +1,705 @@
+body {
+	font-family: Avenir; 
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+} 
+
+
+/*
+OPENING PAGE 
+*/
+
+#initialBackground {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+	background-color: pink;
+	padding: 0.5em;
+	transition: width 1s ease, height 1s ease, top 1s ease, left 1s ease;
+	min-height: 20%;
+	height: 40%;
+	width: 60%;
+}
+
+#initialBackground.active {
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+}
+
+#scrollIcon {
+	display:none;
+	position: absolute;
+	z-index: 12;
+	top: 75%;
+}
+
+#scrollIcon.active {
+	display: block;
+}
+
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	text-align: center;
+	font-size: 100px; 
+	font-style: italic; 
+	font-weight: 800;
+	position: relative;
+	box-sizing: border-box;
+}
+
+#desktopHeader div{
+	z-index: 10;
+}
+
+#desktopHeader div:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 10px;
+	width: 0px;
+	background: transparent;
+	transition: width 1s ease, background-color 1s ease;
+	padding: 0;
+}
+
+#desktopHeader div:hover:after {
+	width: 100%;
+	background: black;
+}
+
+
+#mobileHeader {
+	display: none;
+}
+
+/*SECOND PAGE, AUDIENCE OPTIONS*/
+
+#audOptions {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+	padding: 5%;
+	height: 100vh;
+	padding-top: 20%;
+}
+
+#audOptions h1 {
+	font-size: 2.8em;
+	font-weight: 600;
+	width: 100%;
+	margin-bottom: 4%;
+}
+
+#audOptions h2 {
+	font-size: 2em;
+	font-weight: 600;
+	padding-bottom: 0.7em;
+
+}
+
+#audOptions p {
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+.firstOption {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 20%;
+	padding: 2em;
+	text-align: center;
+}
+
+.firstOption p {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/*
+BLURBS THAT APPEAR DEPENDING ON AUDIENCE SELECTION
+*/
+
+#blurbs {
+	display: block;
+	text-align: center;
+}
+
+#blurbs div {
+	display: none;
+	height: 100vh;
+	font-size: 2em;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15%;
+}
+
+#blurbs.optionA~.onlyA {
+	display: flex;
+}
+
+.onlyA {
+	display: none;
+}
+
+#blurbs.optionA #futureEmpBlurb {
+	display: flex;
+}
+
+#blurbs.optionB #famAndFriendBlurb {
+	display: flex;
+}
+
+#blurbs.optionC #stalkerBlurb {
+	display: flex;
+}
+
+
+/*CV - EDUCATION */
+
+
+#education #middleLine {
+	display: flex;
+/*	margin-left: 40%;*/
+	width: 8px;
+	height: 180vh;
+	background-color: black;
+}
+
+#workExperience #middleLine {
+	display: flex;
+/*	margin-left: 40%;*/
+	width: 8px;
+	height: 190vh;
+	background-color: black;
+}
+
+#volunteer #middleLine {
+	display: flex;
+/*	margin-left: 40%;*/
+	width: 8px;
+	height: 160vh;
+	background-color: black;
+}
+
+
+#education {
+	width: 100%;
+}
+
+
+
+#educationTitle {
+	width: 40%;
+	height: 150vh;
+	font-size: 50px; 
+	font-style: italic; 
+	font-weight: 800;
+	display: flex;
+	padding-top: 20%;
+	justify-content: center;
+	/*position: fixed;*/
+}
+
+#educationCards {
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+}
+
+
+img {
+	max-width: 30%;
+	max-height: 100px; 
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 0%;
+	left: 5%;
+}
+
+
+
+.education {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	position: relative;
+}
+
+#education h3, #education h4, #education  h5, #education  p {
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding-right: 6%;
+	margin-bottom: 3%;
+}
+
+#education h3 {
+	font-weight: 600;
+}
+
+#education h4 {
+	margin-bottom: 0;
+}
+
+#education h5 {
+	font-style: italic;
+}
+
+#education p {
+	margin-bottom: 7%;
+}
+
+#education #generalAssembly {
+	padding-bottom: 30%;
+}
+
+
+/*WORK EXPERIENCE*/
+
+#workExperience {
+	max-height: 250vh; 
+}
+
+#workExperienceTitle {
+	display: flex;
+	justify-content: center;
+	width: 40%;
+	height: 100vh;
+	font-size: 50px; 
+	font-style: italic; 
+	font-weight: 800;
+	display: flex;
+	padding-top: 20%;
+	justify-content: center;
+}
+
+#workExperienceCards {
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+}
+
+#workExperience img {
+	max-width: 30%;
+	max-height: 100px; 
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 0%;
+	left: 5%;
+}
+
+#workExperience #carat img {
+	max-width: 20%;
+}
+#workExperience #worldVision img {
+	max-width: 20%;
+}
+
+.workExp {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+#workExperience h3, h4, h5, p {
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding-right: 6%;
+	margin-bottom: 3%;
+}
+
+
+#workExperience h3 {
+	font-weight: 600;
+}
+
+#workExperience h4 {
+	margin-bottom: 0;
+}
+
+#workExperience h5 {
+	font-style: italic;
+}
+
+#workExperience p {
+	margin-bottom: 7%;
+}
+
+/*VOLUNTEER EXPERIENCE*/
+
+#volunteer {
+	max-height: 100vh; 
+	flex-wrap: wrap;
+}
+
+#youthWork {
+	width: 100%;
+}
+
+#volunteerTitle {
+	display: none;
+	/*display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 10vh;
+	font-size: 50px; 
+	font-style: italic; 
+	font-weight: 800;
+	display: flex;
+	padding-top: 20%;
+	justify-content: center;*/
+}
+
+#volunteerCards {
+	display: none;
+	/*display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	flex-wrap: wrap;*/
+}
+
+
+.volunteer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	position: relative;
+}
+
+#volunteer h3, h4, h5, p {
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding-right: 6%;
+	margin-bottom: 3%;
+}
+
+#volunteer h3 {
+	font-weight: 600;
+}
+
+#volunteer h4 {
+	margin-bottom: 0;
+}
+
+#volunteer h5 {
+	font-style: italic;
+}
+
+#volunteer p {
+	margin-bottom: 7%;
+}
+
+
+
+.titlefixed {
+	position: fixed;
+}
+
+
+/*CONTACT FORM*/
+
+
+#contactForm {
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+	background-color: pink;
+}
+
+#contactForm body {
+	display: flex;
+	align-items: center;
+	font-family: Avenir;
+}
+
+#contactForm main {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+#contactForm header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-height: 20%;
+	min-height: 20px;
+}
+
+#contactForm #contactIntro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 60%;
+	height: 100px;
+	padding: 2em;
+	padding-bottom: 0;
+	font-size: 20px;
+}
+
+#contactForm #formSection {
+/*	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;*/
+	width: 30%;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"] {
+	width: calc(100% - 1em);
+	padding: 0.5em;
+	text-indent: 0.5em;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+	border: 1px solid #888888;
+}
+
+#contactForm textarea {
+	width: calc(100% - 1em);
+	height: 120px;
+	padding: 0.5em;
+	text-indent: 0.5em;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+	border: 1px solid #888888;
+}
+
+#contactForm #submitButton {
+	text-align: center;
+}
+
+/*PAGE FOOTER*/
+
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	color: white;
+	min-width: 100%;
+	height: 20vh;
+	flex-wrap: wrap;
+}
+
+footer p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	min-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+	}
+
+footer #socialMedia {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	color: white;
+	font-size: 3em;
+	width: 30%;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+footer .fa {
+	color: white;
+}
+
+
+
+
+/*
+MOBILE RESPONSIVE*/
+
+
+
+@media (max-width: 768px) {
+	#audOptions {
+		font-size: 0.7em;
+	}
+
+	.firstOption {
+		min-width: 100%;
+	}
+
+	#education #middleLine {
+		display: none;
+	}
+
+	#workExperience #middleLine {
+		display: none;
+	}
+
+	.onlyA {
+		flex-direction: column;
+	}
+
+	#education {
+		min-width: 100%;
+	}
+
+	.education {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#educationTitle {
+		min-width: 100%;
+		text-decoration: underline;
+		height: 20vh;
+	}
+
+	#educationCards {
+		min-width: 100%;
+		text-align: center;
+		padding-left: 0;
+	}
+
+	#education h3, #education h4, #education  h5, #education  p {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	padding-left: 2%;
+	padding-right: 2%;
+	}
+
+	img {
+	max-width: 30%;
+	max-height: 100px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 0;
+	left: 0;
+	padding-bottom: 3%;
+	}
+
+
+	#workExperience {
+		min-width: 100%;
+		max-height: none;
+	}
+
+	.workExp {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#workExperienceTitle {
+		min-width: 100%;
+		text-decoration: underline;
+		height: 20vh;
+	}
+
+	#workExperienceCards {
+		min-width: 100%;
+		text-align: center;
+		padding-left: 0;
+		margin: 0;
+	}
+
+	#workExperience h3, #workExperience h4, #workExperience  h5, #workExperience  p {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	padding-left: 2%;
+	padding-right: 2%;
+	}
+
+	#workExperience img {
+	max-width: 30%;
+	max-height: 100px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 0;
+	left: 0;
+	padding-bottom: 3%;
+	}
+
+	#volunteer {
+		min-width: 100%;
+		max-height: none;
+		padding-bottom: 5%;
+	}
+
+	#volunteerTitle {
+		min-width: 100%;
+		text-decoration: underline;
+		height: 20vh;
+		padding-top: 20%;
+	}
+
+	#volunteerCards {
+		min-width: 100%;
+		text-align: center;
+		padding-left: 0;
+		margin: 0;
+	}
+
+	#volunteer h3, #volunteer h4, #volunteer  h5, #volunteer  p {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	padding-left: 2%;
+	padding-right: 2%;
+	}
+
+	#contactForm main {
+		width: 100%;
+	}
+
+	#contactForm #contactIntro {
+		padding-bottom: 2%;
+	}
+
+	#contactForm #formSection {
+		width: 60%;
+	}
+
+}
+
+
+
+
+

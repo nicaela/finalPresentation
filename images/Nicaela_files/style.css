@@ -1,0 +1,172 @@
+body {
+	font-family: Avenir; 
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+} 
+
+#initialBackground {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+	background-color: pink;
+	padding: 0.5em;
+	transition: width 1s ease, height 1s ease, top 1s ease, left 1s ease;
+	min-height: 20%;
+	height: 40%;
+	width: 60%;
+}
+
+#initialBackground.active {
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+}
+
+#scrollIcon {
+	display:none;
+	position: absolute;
+	z-index: 12;
+	top: 75%;
+}
+
+#scrollIcon.active {
+	display: block;
+}
+
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	text-align: center;
+	font-size: 100px; 
+	font-style: italic; 
+	font-weight: 800;
+	position: relative;
+	box-sizing: border-box;
+}
+
+#desktopHeader div{
+	z-index: 10;
+}
+
+#desktopHeader div:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 10px;
+	width: 0px;
+	background: transparent;
+	transition: width 1s ease, background-color 1s ease;
+	padding: 0;
+}
+
+#desktopHeader div:hover:after {
+	width: 100%;
+	background: black;
+}
+
+
+#mobileHeader {
+	display: none;
+}
+
+#audOptions {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+	padding: 5%;
+}
+
+.firstOption {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 20%;
+	padding: 2em;
+	text-align: center;
+}
+/*
+#optionA h2:hover {
+	font-color: grey;
+}*/
+
+.firstOption p {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+#blurbs {
+	display:none;
+}
+
+#eduction {
+	display: flex;
+	width: 100%;
+}
+
+#middleLine {
+	display: flex;
+	width: 8px;
+	height: 200vh;
+	margin-top: 10%;
+	background-color: black;
+}
+
+#educationTitle {
+	width: 50%;
+	height: 150vh;
+	font-size: 50px; 
+	font-style: italic; 
+	font-weight: 800;
+	display: flex;
+	padding-top: 30%;
+	justify-content: center;
+}
+
+#educationCards {
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+}
+
+img {
+	max-width: 30%;
+	max-height: 100px; 
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.education {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+#education h3, h4, h5, p {
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	margin-bottom: 3%;
+}
+
+#education p {
+	margin-bottom: 7%;
+}
+
+
+
+
+#blurbs {
+	text-align: center;
+}
